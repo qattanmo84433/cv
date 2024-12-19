@@ -8,7 +8,7 @@ import {
 } from "../../components/ui/card";
 import { Section } from "../../components/ui/section";
 import { RESUME_DATA } from "../../data/resume-data";
-
+import { twMerge } from "tailwind-merge";
 type ProjectTags = readonly string[];
 
 interface ProjectLinkProps {
@@ -67,10 +67,12 @@ function ProjectTags({ tags }: ProjectTagsProps) {
       {tags.map((tag) => (
         <li key={tag}>
           <Badge
-            className="px-1 py-0 text-[10px] print:px-1 print:py-0.5 print:text-[8px] print:leading-tight"
-            variant="secondary"
+            className={twMerge(
+              "print:text-[10px] transition-transform duration-200 hover:scale-110 hover:shadow-md",              
+            )}
+            aria-label={`tag: ${tag}`}
+            label={tag}
           >
-            {tag}
           </Badge>
         </li>
       ))}
@@ -123,26 +125,48 @@ interface ProjectsProps {
  */
 export function Projects({ projects }: ProjectsProps) {
   return (
-    <Section className="print-force-new-page scroll-mb-16 print:space-y-4 print:pt-12">
-      <h2 className="text-xl font-bold" id="side-projects">
-        Side projects
+    <Section className="py-12 bg-gray-50">
+      <h2 className="text-3xl font-extrabold text-gray-900 mb-8 text-center" id="side-projects">
+        Side Projects
       </h2>
       <div
-        className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3"
+        className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
         role="feed"
         aria-labelledby="side-projects"
       >
         {projects.map((project) => (
           <article
             key={project.title}
-            className="h-full" // Added h-full here
+            className="h-full"
           >
-            <ProjectCard
-              title={project.title}
-              description={project.description}
-              tags={project.techStack}
-              link={"link" in project ? project.link.href : undefined}
-            />
+            <Card
+              className="flex h-full flex-col overflow-hidden rounded-lg border bg-white shadow-md hover:shadow-lg transition-shadow duration-300"
+              role="article"
+            >
+              <CardHeader>
+                <CardTitle className="text-lg font-bold text-gray-800 hover:text-blue-600 transition-colors">
+                  <ProjectLink title={project.title} link={project.link?.href} />
+                </CardTitle>
+                <CardDescription className="mt-2 text-sm text-gray-600">
+                  {project.description}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="mt-auto">
+                <ul
+                  className="flex flex-wrap gap-2 mt-4"
+                  aria-label="Technologies used"
+                >
+                  {project.techStack.map((tag) => (
+                    <li key={tag}>
+                      <Badge
+                        className="bg-gray-100 text-gray-800 rounded-full px-3 py-1 text-xs font-medium shadow hover:bg-gray-200 hover:scale-105 transition-transform"
+                        label={tag}
+                      />
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
           </article>
         ))}
       </div>

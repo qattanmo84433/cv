@@ -9,9 +9,9 @@ import {
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
-  name: "Bartosz Jarocki",
+  name: "Ali Qattan",
   initials: "BJ",
-  location: "Wrocław, Poland, CET",
+  location: "Nuernberg",
   locationLink: "https://www.google.com/maps/place/Wrocław",
   about:
     "Detail-oriented Full Stack Engineer dedicated to building high-quality products.",
@@ -24,10 +24,10 @@ export const RESUME_DATA = {
     </>
   ),
   avatarUrl: "https://avatars.githubusercontent.com/u/1017620?v=4",
-  personalWebsiteUrl: "https://jarocki.me",
+  personalWebsiteUrl: "https://ali.me",
   contact: {
-    email: "bartosz.jarocki@hey.com",
-    tel: "+48530213401",
+    email: "maliqattan@gmail.com",
+    tel: "+4915227855688",
     social: [
       {
         name: "GitHub",
@@ -48,20 +48,20 @@ export const RESUME_DATA = {
   },
   education: [
     {
-      school: "Wrocław University of Technology",
-      degree: "Bachelor's Degree in Control systems engineering and Robotics",
-      start: "2007",
-      end: "2010",
+      school: "Technische Hochschule Nuernberg",
+      degree: "Bachelor's Degree in Computer Science",
+      start: "2020",
+      end: "2024",
     },
   ],
   work: [
     {
-      company: "Film.io",
+      company: "adesso SE",
       link: "https://film.io",
-      badges: ["Remote", "React", "Next.js", "TypeScript", "Node.js"],
-      title: "Software Architect",
+      badges: ["Remote", "C#", "Blazor Webassembly", "Blazor Server", "React", "Next.js"],
+      title: "Software Engineer",
       logo: ConsultlyLogo,
-      start: "2024",
+      start: "2021",
       end: null,
       description: (
         <>
@@ -83,107 +83,15 @@ export const RESUME_DATA = {
         </>
       ),
     },
-    {
-      company: "Parabol",
-      link: "https://parabol.co",
-      badges: [
-        "Remote",
-        "React",
-        "TypeScript",
-        "Node.js",
-        "GraphQL",
-        "Tailwind CSS",
-      ],
-      title: "Senior Full Stack Developer",
-      logo: ParabolLogo,
-      start: "2021",
-      end: "2024",
-      description: (
-        <>
-          Senior developer and squad leader for an enterprise agile meeting
-          platform.
-          <ul className="list-inside list-disc">
-            <li>
-              Built design system with Tailwind CSS, improving development speed
-              and time to market
-            </li>
-            <li>
-              Implemented engineering practices: PR automation, code review
-              guidelines, and workflows
-            </li>
-            <li>
-              Open source contributions to Relay DevTools and React i18n tooling
-            </li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      company: "Clevertech",
-      link: "https://clevertech.biz",
-      badges: ["Remote", "React", "TypeScript", "Node.js", "Android", "Kotlin"],
-      title: "Lead Android Developer → Full Stack Developer",
-      logo: ClevertechLogo,
-      start: "2015",
-      end: "2021",
-      description: (
-        <>
-          Successfully transitioned from mobile to full-stack development while
-          leading distributed teams.
-          <ul className="list-inside list-disc">
-            <li>
-              Led frontend team at Evercast, building real-time platform
-              supporting 30+ users per room with HD streaming and collaboration
-              tools
-            </li>
-            <li>
-              Developed offline-first Android app for DKMS, improving donor
-              registration process
-            </li>
-            <li>
-              Led development teams across multiple successful client projects
-            </li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      company: "Jojo Mobile",
-      link: "https://bsgroup.eu/",
-      badges: ["On Site", "Android", "Java", "Kotlin"],
-      title: "Android Developer → Lead Android Developer",
-      logo: JojoMobileLogo,
-      start: "2012",
-      end: "2015",
-      description: (
-        <>
-          First Android developer, grew and led a team of 15+ engineers while
-          establishing engineering culture.
-          <ul className="list-inside list-disc">
-            <li>
-              Developed apps for major Polish companies including LOT, Polskie
-              Radio, and Agora
-            </li>
-            <li>Built and mentored high-performing mobile development team</li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      company: "Nokia Siemens Networks",
-      link: "https://www.nokia.com",
-      badges: ["On Site", "C/C++", "LTE", "Agile"],
-      title: "C/C++ Developer",
-      logo: NSNLogo,
-      start: "2010",
-      end: "2012",
-      description:
-        "Developed software for LTE base stations at enterprise scale, gaining strong fundamentals in software architecture, testing practices, and cross-team collaboration.",
-    },
   ],
   skills: [
-    "React/Next.js/Remix",
-    "TypeScript",
+    "C#",
+    ".NET WebAPIs",
+    "Blazor Webassembly",
+    "Blazor Server",
+    "Entity Framework",
+    "Azure DevOps",
+    "SQL",
     "Tailwind CSS",
     "Design Systems",
     "WebRTC",
